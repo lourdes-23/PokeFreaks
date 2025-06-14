@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>PokeFreaks</title>
+    <link href="../img/image.png" type="image/png" rel="shortcut icon"/>
+    <!-- Importar o CSS do Bootstrap -->
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <!-- Importar o script.js da pasta js -->
+    <script  src="../js/script.js" type="text/javascript" rel="javascript"></script>
+ <style>
+      html, body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        background-color: #F1F1F1;
+      }
+      main {
+        flex: 1;
+      }
+      footer {
+        width: 100%;
+        background-color: #F1F1F1;
+        color: #333333;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .vermelho {
+        background-color: #82d3ff;
+      }
+      .btn-outline-light {
+        color: #3a4a50;
+        border-color: #3a4a50;
+      }
+      .btn-outline-light:hover {
+        background-color: #82d3ff;
+        color: #ffffff;
+      }
+      header {
+        background-color: #82d3ff;
+      }
+      main {
+        background-color: #F1F1F1;
+        padding: 20px;
+      }
+      footer {
+        background-color: #F1F1F1;
+        color: #333333;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .navbar-brand {
+        color: #3a4a50 !important;
+      }
+      .navbar-toggler-icon {
+        background-color: #3a4a50;
+      }
+      .navbar-light .navbar-nav .nav-link {
+        color: #3a4a50;
+      }
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: white;
+      }
+      .form-control {
+        background-color: #D6D6D6;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/pikachu.png" alt="logo" width="30" height="24"> PokeFreaks
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            <li class="nav-item"><a class="nav-link" href="../pages/produtos.html">Produtos</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="../pages/emulador.html">Emulator GBA</a></li>
+           
+            <li class="nav-item dropdown">
+              <a class="btn btn-outline-light" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../pages/comentarios.html">Comentários</a></li>
+                <li><a class="dropdown-item" href="../pages/downloads.html"> Downloads</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar produtos" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+     <!-- aqui é meus script -->
+    <script src="../js/script.js"></script>
+
+  <main>
+    <h1 class="text-center">Carrinho de compras</h1>
+    <div class="container">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Produto 1 -->
+          <tr>
+            <td><img src="../img/produtos/fireread.jpg" alt="Pokémon Firered" width="100"></td>
+            <td>
+              Nome: Cartucho GBA "Pokémon Firered"<br>
+              Tamanho: 2MB<br>
+              Plataforma: GBA
+             </td>
+              <td id="preco_1">29.90</td>
+              <td>
+                <input type="number" id="qtd_1" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_1">R$ 0,00</td>
+            </tr>
+
+          <!-- Produto 2 -->
+          <tr>
+            <td><img src="../img/produtos/emerald.jpg" alt="Pokémon Emerald" width="100"></td>
+            <td>
+              Nome: Cartucho GBA "Pokémon Emerald"<br>
+              Tamanho: 2MB<br>
+              Plataforma: GBA
+             </td>
+              <td id="preco_2">29.90</td>
+              <td>
+                <input type="number" id="qtd_2" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_2">R$ 0,00</td>
+            </tr>
+          
+            <!-- Produto 3 -->
+          <tr>
+            <td><img src="../img/produtos/saphire.jpg" alt="Pokémon Sapphire" width="100"></td>
+            <td>
+              Nome: Cartucho GBA "Pokémon Sapphire"<br>
+              Tamanho: 2MB<br>
+              Plataforma: GBA
+             </td>
+              <td id="preco_3">29.90</td>
+              <td>
+                <input type="number" id="qtd_3" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_3">R$ 0,00</td>
+            </tr>
+
+          <!-- Produto 4 -->
+          <tr>
+            <td><img src="../img/produtos/bulba.png" alt="Pelúcia Bulbasaur" width="100"></td>
+            <td>
+              Nome: Pelúcia Bulbasaur<br>
+              Tamanho: Médio<br>
+              Forma: Eevee Pikachu
+             </td>
+              <td id="preco_4">69.90</td>
+              <td>
+                <input type="number" id="qtd_4" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_4">R$ 0,00</td>
+            </tr>
+
+          <!-- Produto 5 -->
+          <tr>
+            <td><img src="../img/produtos/pika.png" alt="Pelúcia Pikachu" width="100"></td>
+            <td>
+              Nome: Pelúcia Pikachu<br>
+              Tamanho: Médio<br>
+              Forma: Eevee Pikachu
+            </td>
+              <td id="preco_5">79.90</td>
+              <td>
+                <input type="number" id="qtd_5" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_5">R$ 0,00</td>
+            </tr>
+
+          <!-- Produto 6 -->
+          <tr>
+            <td><img src="../img/produtos/camisa.png" alt="Camisa Pokémon" width="100"></td>
+            <td>
+              Nome: Camisa Pokémon<br>
+              Tamanho: P/M/G<br>
+              Cor: Branca e vermelha
+             </td>
+              <td id="preco_6">42.90</td>
+              <td>
+                <input type="number" id="qtd_6" value="0" min="0" class="form-control" 
+                onchange="atualizarTotal()" style="width: 80px;">
+              </td>
+              <td id="total_6">R$ 0,00</td>
+            </tr>
+        
+          </tbody>
+        </table>
+
+        <div class="text-end">
+          <h4>Total Geral: <span id="total_geral">R$ 0,00</span></h4>
+        </div>
+      </div>
+    
+  </main>
+
+   <!-- Importar o JS do Bootstrap e dependências -->
+ <script src="../js/bootstrap.bundle.min.js" type="text/javascript" rel="javascript"></script>
+</body>
+</html>

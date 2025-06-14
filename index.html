@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>PokeFreaks</title>
+    <link rel="shortcut icon" type="image/png" href="img/image.png"/>
+    <!-- Importar o CSS do Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <style>
+      html, body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        background-color: #F1F1F1;
+      }
+      main {
+        flex: 1;
+      }
+      footer {
+        width: 100%;
+        background-color: #F1F1F1;
+        color: #333333;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .vermelho {
+        background-color: #82d3ff;
+      }
+      .btn-outline-light {
+        color: #3a4a50;
+        border-color: #3a4a50;
+      }
+      .btn-outline-light:hover {
+        background-color: #82d3ff;
+        color: #ffffff;
+      }
+      header {
+        background-color: #82d3ff;
+      }
+      main {
+        background-color: #F1F1F1;
+        padding: 20px;
+      }
+      footer {
+        background-color: #F1F1F1;
+        color: #333333;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .navbar-brand {
+        color: #3a4a50 !important;
+      }
+      .navbar-toggler-icon {
+        background-color: #3a4a50;
+      }
+      .navbar-light .navbar-nav .nav-link {
+        color: #3a4a50;
+      }
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: white;
+      }
+      .form-control {
+        background-color: #D6D6D6;
+      }
+      .carousel-item img,
+      .carousel-item video {
+        width: 1500px;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .card-img-top {
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+      margin: 0 auto;
+      }
+
+    </style>
+    
+</head>
+<body class="bg-warning-subtle">
+    <!-- minha sessão de cabeçalho ou nav bar-->
+    <header>
+        <nav class="navbar navbar-expand-lg vermelho p-3">
+            <div class="container-fluid">
+                <img src="img/pikachu.png" alt="pokemon" width="30" height="24">
+                <a class="navbar-brand" href="index.html"> PokeFreaks </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="pages/produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="pages/emulador.html">Emulator GBA</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-outline-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/comentarios.html"> Comentários </a></li>
+                                <li><a class="dropdown-item" href="pages/downloads.html"> Downloads</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar produtos" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+        
+    <main>
+    <!-- Minha sessão de carrosel -->
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/2.png" class="d-block w-100" alt="...">
+        </div>
+          <div class="carousel-item">
+  <video autoplay muted loop class="d-block mx-auto" width="1500" height="450" style="object-fit: cover;">
+    <source src="video/videopkm.mp4" type="video/mp4">
+  </video>
+</div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <br>
+    <!--Minha sessão de cards-->
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="img/produtos/bolsa pika.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> Bolsa pokémon Pikachu infantil escolar <br>  </h5>
+              <p class="card-text">De <span style="text-decoration: line-through;">R$ 225,90</span></p>
+              <p class="card-text"> <h4> Por apenas <span style="font-weight: 600; color: rgb(2, 182, 2);">R$ 197,90</span> </h4> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/produtos/chari.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> Brinquedo pokémon Charizard articulado <br>  </h5>
+              <p class="card-text">De <span style="text-decoration: line-through;">R$ 58,90</span></p>
+              <p class="card-text"> <h4> Por apenas <span style="font-weight: 600; color: rgb(2, 182, 2);">R$ 49,90</span> </h4> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/produtos/bone.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> Boné do Ash anime pokémon  <br> </h5>
+              <p class="card-text">De <span style="text-decoration: line-through;">R$ 44,90</span></p>
+              <p class="card-text"> <h4> Por apenas <span style="font-weight: 600; color: rgb(2, 182, 2);">R$ 37,90</span> </h4> </p>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    </main>    
+    
+    <footer>
+        <p> Seja bem-vindo! :)</p>
+    </footer>
+
+    </footer>
+    <!-- Importar o JS do Bootstrap e dependências -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
